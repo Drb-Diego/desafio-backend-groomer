@@ -1,5 +1,5 @@
 import express from 'express';
-import errorMIddleware from '../middlewares/errorMIddleware';
+import errorMIddleware from '../controllers/errorMIddleware';
 import routes from '../routes';
 import 'dotenv/config';
 
