@@ -7,12 +7,7 @@ const tmpPath = path.resolve(__dirname, '..', '..', 'tmp');
 const storage = multer.diskStorage({
   destination: (req, file, cb) => cb(null, tmpPath),
 
-  filename: (req, file, cb) => {
-    const uuid = crypto.randomUUID();
-    const extension = file.mimetype.split('/')[1];
-
-    cb(null, `${uuid}.${extension}`);
-  }
+  filename: (req, file, cb) => cb(null, file.originalname),
 })
 
 const upload = multer({ storage: storage })
