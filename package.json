@@ -4,7 +4,7 @@
   "description": "Você provavelmente já está participando do nosso processo seletivo, mas se você caiu aqui por acaso, leia esse documento até o final e se você se interessar, pode começar o processo à partir daqui =]",
   "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tsc && node dist/server.js",
     "dev": "ts-node-dev  --respawn --transpile-only --exit-child src/server.ts"
   },
   "repository": {
