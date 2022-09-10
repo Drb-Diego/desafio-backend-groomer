@@ -1,4 +1,4 @@
-import expressConfig from './app';
+import expressConfig from './config';
 
 const { PORT } = process.env;
 
