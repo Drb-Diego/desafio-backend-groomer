@@ -10,4 +10,9 @@ routes.post(
   restaurantController.createRestaurant
 );
 
+routes.get(
+  '/restaurant/getAllRestaurant',
+  restaurantController.getAllRestaurant
+);
+
 export default routes;

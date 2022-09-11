@@ -1,6 +1,7 @@
+import { IRestaurantInfo } from "../@types";
 import readFile from "./readFile";
 import deleteFile from "./deleteFile";
-import { IRestaurantInfo } from "../@types";
+
 import restaurantModel from "../models/restaurantModel";
 
 const createRestaurant = async ({ name, openingHours, imageName }: IRestaurantInfo) => {
@@ -9,6 +10,12 @@ const createRestaurant = async ({ name, openingHours, imageName }: IRestaurantIn
   deleteFile(String(imageName));
 }
 
+const getAllRestaurant = async () => {
+  const [allRestaurant] = await restaurantModel.getAllRestaurant();
+  return allRestaurant;
+}
+
 export default {
-  createRestaurant
+  createRestaurant,
+  getAllRestaurant
 }

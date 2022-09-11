@@ -18,6 +18,16 @@ const createRestaurant = async (req: Request, res: Response, next: NextFunction)
   }
 };
 
+const getAllRestaurant = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const allRestaurant = await restaurantService.getAllRestaurant();
+    return res.status(200).json(allRestaurant);
+  } catch (error) {
+    next(error);
+  }
+}
+
 export default {
   createRestaurant,
+  getAllRestaurant,
 };
